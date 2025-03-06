@@ -1,7 +1,6 @@
 {
   "youtube": {
     "selectors": [
-      // Video player ad elements
       ".ytp-ad-overlay-container",
       ".ytp-ad-overlay-slot",
       ".ytp-ad-player-overlay",
@@ -14,8 +13,6 @@
       ".ytp-ad-skip-button-slot",
       ".ytp-ad-preview-slot",
       ".ytp-ad-message-slot",
-      
-      // Feed and sidebar ads
       "div[id*='ad-badge']",
       ".ytd-promoted-video-renderer",
       ".ytd-promoted-sparkles-web-renderer",
@@ -31,8 +28,6 @@
       ".ytd-merch-shelf-renderer",
       "ytd-promoted-sparkles-text-search-renderer",
       ".ytd-primetime-promo-renderer",
-      
-      // Additional promotional content
       ".ytd-carousel-ad-renderer",
       ".ytd-promoted-sparkles-text-search-renderer",
       ".ytd-promoted-sparkles-web-renderer",
@@ -50,8 +45,6 @@
       ".ytd-ad-slot-renderer",
       ".ytd-promoted-sparkles-text-search-renderer",
       ".ytd-banner-promo-renderer",
-      
-      // Shopping and merchandise
       ".ytd-merch-shelf-renderer",
       ".ytd-shopping-unit-renderer",
       ".ytd-product-details-drawer",
@@ -64,7 +57,6 @@
       ".ytd-product-addons-renderer"
     ],
     "scriptPatterns": [
-      // Core ad scripts
       "pagead",
       "doubleclick",
       "adservice",
@@ -72,8 +64,6 @@
       "youtube.com/pagead",
       "youtube.com/get_midroll_",
       "youtube.com/get_video_info?*adformat",
-      
-      // Additional tracking and ad scripts
       "google-analytics.com/analytics.js",
       "googletagmanager.com/gtm.js",
       "googletagservices.com/tag/js/gpt.js",
@@ -87,7 +77,6 @@
       "youtube.com/_get_ads"
     ],
     "networkPatterns": [
-      // YouTube specific ad endpoints
       "youtube.com/api/stats/ads",
       "youtube.com/pagead",
       "youtube.com/get_midroll_",
@@ -96,16 +85,12 @@
       "youtube.com/ptracking",
       "youtube.com/pagead/parallel",
       "youtube.com/api/stats/qoe",
-      
-      // Google ad services
       "googlesyndication.com",
       "google-analytics.com",
       "googletagservices.com",
       "googleadservices.com",
       "doubleclick.net",
       "static.doubleclick.net",
-      
-      // Additional ad networks
       "moatads.com",
       "amazon-adsystem.com",
       "criteo.com",
@@ -129,7 +114,6 @@
   },
   "twitch": {
     "selectors": [
-      // Player and overlay ads
       ".ad-banner",
       ".persistent-player__ad",
       "[class*='ad-slot']",
@@ -141,8 +125,6 @@
       ".video-player__overlay--ad-persistent",
       ".extension-overlay",
       ".player-ad-notice",
-      
-      // Page ads and promotions
       ".channel-leaderboard",
       ".channel-panels-container [data-a-target*='panel'][data-test-selector*='ad']",
       ".top-nav__promotional",
@@ -151,8 +133,6 @@
       ".stream-info-card__promotion",
       ".bits-promotion",
       ".promoted-panel",
-      
-      // Additional Twitch-specific elements
       ".channel-root__info [data-test-selector*='ad']",
       ".channel-info-content [data-test-selector*='sponsored']",
       ".stream-display-ad",
@@ -170,7 +150,6 @@
       ".stream-info-social-panel [data-test-selector*='sponsored']"
     ],
     "scriptPatterns": [
-      // Core Twitch ad scripts
       "gql/integrity",
       "spade.twitch.tv",
       "script.ioam.de",
@@ -181,8 +160,6 @@
       "static.twitchcdn.net/assets/advertising",
       "twitchsvc.com/advertising",
       "twitchcdn.net/ads",
-      
-      // Additional tracking and ad scripts
       "cdn.krxd.net/controltag",
       "branch.io/branch-latest.min.js",
       "serving-sys.com/BurstingPipe",
@@ -194,7 +171,6 @@
       "moatads.com/analytics.js"
     ],
     "networkPatterns": [
-      // Twitch-specific endpoints
       "gql/integrity",
       "spade.twitch.tv",
       "script.ioam.de",
@@ -205,8 +181,6 @@
       "static.twitchcdn.net/assets/advertising",
       "twitchsvc.com/advertising",
       "twitchcdn.net/ads",
-      
-      // Ad networks and trackers
       "doubleclick.net",
       "google-analytics.com",
       "googletagservices.com",
@@ -222,8 +196,6 @@
       "scorecardresearch.com/beacon.js",
       "casalemedia.com",
       "moatads.com",
-      
-      // Additional tracking endpoints
       "adsrvr.org",
       "bluekai.com",
       "criteo.com",
