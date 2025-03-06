@@ -1,6 +1,7 @@
 {
   "youtube": {
     "selectors": [
+      // Video player ad elements
       ".ytp-ad-overlay-container",
       ".ytp-ad-overlay-slot",
       ".ytp-ad-player-overlay",
@@ -10,6 +11,11 @@
       ".ytp-ad-progress",
       ".ytp-ad-overlay-image",
       ".ytp-ad-text-overlay",
+      ".ytp-ad-skip-button-slot",
+      ".ytp-ad-preview-slot",
+      ".ytp-ad-message-slot",
+      
+      // Feed and sidebar ads
       "div[id*='ad-badge']",
       ".ytd-promoted-video-renderer",
       ".ytd-promoted-sparkles-web-renderer",
@@ -24,32 +30,106 @@
       ".ytd-watch-next-secondary-results-renderer > ytd-compact-promoted-video-renderer",
       ".ytd-merch-shelf-renderer",
       "ytd-promoted-sparkles-text-search-renderer",
-      ".ytd-primetime-promo-renderer"
+      ".ytd-primetime-promo-renderer",
+      
+      // Additional promotional content
+      ".ytd-carousel-ad-renderer",
+      ".ytd-promoted-sparkles-text-search-renderer",
+      ".ytd-promoted-sparkles-web-renderer",
+      ".ytd-brand-video-singleton-renderer",
+      ".ytd-brand-video-shelf-renderer",
+      ".ytd-promoted-video-inline-renderer",
+      ".ytd-movie-offer-module-renderer",
+      ".ytd-promoted-sparkles-direct-renderer",
+      ".ytd-merch-promotion-renderer",
+      ".ytd-video-quality-promo-renderer",
+      ".ytd-background-promo-renderer",
+      ".ytd-banner-promo-renderer-background",
+      ".ytd-statement-banner-renderer",
+      ".ytd-in-feed-ad-layout-renderer",
+      ".ytd-ad-slot-renderer",
+      ".ytd-promoted-sparkles-text-search-renderer",
+      ".ytd-banner-promo-renderer",
+      
+      // Shopping and merchandise
+      ".ytd-merch-shelf-renderer",
+      ".ytd-shopping-unit-renderer",
+      ".ytd-product-details-drawer",
+      ".ytd-product-price-info-renderer",
+      ".ytd-product-link-renderer",
+      ".ytd-product-offer-renderer",
+      ".ytd-product-grid-renderer",
+      ".ytd-product-callout-renderer",
+      ".ytd-product-bundle-renderer",
+      ".ytd-product-addons-renderer"
     ],
     "scriptPatterns": [
+      // Core ad scripts
       "pagead",
       "doubleclick",
       "adservice",
       "youtube.com/api/stats/ads",
       "youtube.com/pagead",
       "youtube.com/get_midroll_",
-      "youtube.com/get_video_info?*adformat"
+      "youtube.com/get_video_info?*adformat",
+      
+      // Additional tracking and ad scripts
+      "google-analytics.com/analytics.js",
+      "googletagmanager.com/gtm.js",
+      "googletagservices.com/tag/js/gpt.js",
+      "googlesyndication.com/pagead/js",
+      "youtube.com/yts/jsbin/www-pagead",
+      "youtube.com/s/player/*/player_ias.vflset/",
+      "youtube.com/api/stats/qoe",
+      "youtube.com/api/stats/ads",
+      "youtube.com/pagead/parallel",
+      "youtube.com/ptracking",
+      "youtube.com/_get_ads"
     ],
     "networkPatterns": [
+      // YouTube specific ad endpoints
       "youtube.com/api/stats/ads",
       "youtube.com/pagead",
+      "youtube.com/get_midroll_",
+      "youtube.com/get_video_info?*adformat",
+      "youtube.com/_get_ads",
+      "youtube.com/ptracking",
+      "youtube.com/pagead/parallel",
+      "youtube.com/api/stats/qoe",
+      
+      // Google ad services
       "googlesyndication.com",
       "google-analytics.com",
       "googletagservices.com",
       "googleadservices.com",
       "doubleclick.net",
       "static.doubleclick.net",
-      "youtube.com/get_midroll_",
-      "youtube.com/get_video_info?*adformat"
+      
+      // Additional ad networks
+      "moatads.com",
+      "amazon-adsystem.com",
+      "criteo.com",
+      "outbrain.com",
+      "taboola.com",
+      "adnxs.com",
+      "pubmatic.com",
+      "rubiconproject.com",
+      "casalemedia.com",
+      "openx.net",
+      "advertising.com",
+      "yieldmanager.com",
+      "quantserve.com",
+      "scorecardresearch.com",
+      "innovid.com",
+      "fwmrm.net",
+      "imrworldwide.com",
+      "2mdn.net",
+      "serving-sys.com"
     ]
   },
   "twitch": {
     "selectors": [
+      // Player and overlay ads
       ".ad-banner",
       ".persistent-player__ad",
       "[class*='ad-slot']",
@@ -61,6 +141,8 @@
       ".video-player__overlay--ad-persistent",
       ".extension-overlay",
       ".player-ad-notice",
+      
+      // Page ads and promotions
       ".channel-leaderboard",
       ".channel-panels-container [data-a-target*='panel'][data-test-selector*='ad']",
       ".top-nav__promotional",
@@ -68,21 +150,27 @@
       "[data-a-target='promoted-game']",
       ".stream-info-card__promotion",
       ".bits-promotion",
-      ".promoted-panel"
+      ".promoted-panel",
+      
+      // Additional Twitch-specific elements
+      ".channel-root__info [data-test-selector*='ad']",
+      ".channel-info-content [data-test-selector*='sponsored']",
+      ".stream-display-ad",
+      ".prime-offers",
+      ".prime-offer-banner",
+      ".bits-purchase-banner",
+      ".partner-program-banner",
+      ".subscription-promotion-banner",
+      ".hype-train-notification-container",
+      ".community-points-summary [data-test-selector*='sponsored']",
+      ".channel-panels__container [data-test-selector*='sponsored']",
+      ".extension-taskbar [data-test-selector*='ad']",
+      ".extension-container [data-test-selector*='sponsored']",
+      ".channel-root__right-column [data-test-selector*='ad']",
+      ".stream-info-social-panel [data-test-selector*='sponsored']"
     ],
     "scriptPatterns": [
-      "gql/integrity",
-      "spade.twitch.tv",
-      "script.ioam.de",
-      "scorecardresearch.com",
-      "amazon-adsystem.com",
-      "imrworldwide.com",
-      "pubads.g.doubleclick.net",
-      "static.twitchcdn.net/assets/advertising",
-      "twitchsvc.com/advertising",
-      "twitchcdn.net/ads"
-    ],
-    "networkPatterns": [
+      // Core Twitch ad scripts
       "gql/integrity",
       "spade.twitch.tv",
       "script.ioam.de",
@@ -93,6 +181,32 @@
       "static.twitchcdn.net/assets/advertising",
       "twitchsvc.com/advertising",
       "twitchcdn.net/ads",
+      
+      // Additional tracking and ad scripts
+      "cdn.krxd.net/controltag",
+      "branch.io/branch-latest.min.js",
+      "serving-sys.com/BurstingPipe",
+      "adroll.com/j/roundtrip.js",
+      "pixel.advertising.com",
+      "demdex.net/id",
+      "quantserve.com/quant.js",
+      "casalemedia.com/j",
+      "moatads.com/analytics.js"
+    ],
+    "networkPatterns": [
+      // Twitch-specific endpoints
+      "gql/integrity",
+      "spade.twitch.tv",
+      "script.ioam.de",
+      "scorecardresearch.com",
+      "amazon-adsystem.com",
+      "imrworldwide.com",
+      "pubads.g.doubleclick.net",
+      "static.twitchcdn.net/assets/advertising",
+      "twitchsvc.com/advertising",
+      "twitchcdn.net/ads",
+      
+      // Ad networks and trackers
       "doubleclick.net",
       "google-analytics.com",
       "googletagservices.com",
@@ -107,7 +221,27 @@
       "quantserve.com",
       "scorecardresearch.com/beacon.js",
       "casalemedia.com",
-      "moatads.com"
+      "moatads.com",
+      
+      // Additional tracking endpoints
+      "adsrvr.org",
+      "bluekai.com",
+      "criteo.com",
+      "crwdcntrl.net",
+      "exelator.com",
+      "eyeota.net",
+      "indexww.com",
+      "lijit.com",
+      "mathtag.com",
+      "mediamath.com",
+      "nexac.com",
+      "rfihub.com",
+      "sharethrough.com",
+      "simpli.fi",
+      "sitescout.com",
+      "tapad.com",
+      "turn.com",
+      "w55c.net"
     ]
   }
 }
